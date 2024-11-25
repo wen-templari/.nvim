@@ -19,7 +19,6 @@ return {
     },
         config = function()
     require("themery").setup({
-      themeConfigFile = "./lua/plugins/theme_persist.lua",
       themes = {
         {
           name = "Day",
