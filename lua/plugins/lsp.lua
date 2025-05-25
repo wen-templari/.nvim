@@ -4,8 +4,8 @@ return {
     branch = 'v2.x',
     dependencies = {
       { 'neovim/nvim-lspconfig' },             -- Required
-      { 'williamboman/mason.nvim' },           -- Optional
-      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+      { 'mason-org/mason.nvim' },           -- Optional
+      { 'mason-org/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
       { 'hrsh7th/nvim-cmp' }, -- Required
