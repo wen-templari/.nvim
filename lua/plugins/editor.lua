@@ -87,4 +87,5 @@ return {
       require('Comment').setup()
     end
   },
+  {'akinsho/toggleterm.nvim', version = "*", config = true}
 }

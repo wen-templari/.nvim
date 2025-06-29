@@ -7,6 +7,7 @@ map('n', '<leader>fg', ':Telescope live_grep<CR>', opt)
 map('n', '<leader>fh', ':Telescope help_tags<CR>', opt)
 
 map('n', '<leader>tt', ':NvimTreeToggle<CR>', opt)
+map('n', '<leader>tm', ':ToggleTerm size=80 direction=vertical<CR>', opt)
 map('n', '<leader>tb', ':GitBlameToggle<CR>', opt)
 
 map('n', '<leader>gf', '<cmd>lua=vim.lsp.buf.format()<CR>', opt)
