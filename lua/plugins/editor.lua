@@ -1,6 +1,20 @@
 return {
 
   { 'tpope/vim-repeat' },
+  {
+    'mg979/vim-visual-multi',
+    branch = 'master',
+    event = { "BufReadPost", "BufNewFile" }
+  },
+  {
+    'folke/which-key.nvim',
+    event = "VeryLazy",
+    config = function()
+      require("which-key").setup({
+        delay = 500,
+      })
+    end
+  },
   { 'dkarter/bullets.vim' },
   {
     'windwp/nvim-autopairs',
@@ -87,5 +101,38 @@ return {
       require('Comment').setup()
     end
   },
-  {'akinsho/toggleterm.nvim', version = "*", config = true}
+  {
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    config = function()
+      require("toggleterm").setup({
+        size = 20,
+        open_mapping = [[<c-`>]],
+        hide_numbers = true,
+        shade_filetypes = {},
+        shade_terminals = true,
+        shading_factor = 2,
+        start_in_insert = true,
+        insert_mappings = true,
+        persist_size = true,
+        direction = 'float',
+        close_on_exit = true,
+        shell = vim.o.shell,
+        float_opts = {
+          border = 'curved',
+          winblend = 0,
+          highlights = {
+            border = "Normal",
+            background = "Normal",
+          }
+        }
+      })
+    end
+  },
+  {
+    'famiu/bufdelete.nvim',
+    config = function()
+      -- This plugin provides better buffer deletion
+    end
+  }
 }

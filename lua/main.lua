@@ -20,6 +20,7 @@ require("lazy").setup({
   require('plugins/lsp'),
   require('plugins/nvim-treesitter'),
   require('plugins/git'),
+  require('plugins/search'),
 
   -- { 'Bekaboo/dropbar.nvim' },
   {

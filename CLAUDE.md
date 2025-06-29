@@ -13,22 +13,24 @@ This is a Neovim configuration using Lazy.nvim as the plugin manager. The config
   - `theme.lua` - Themery theme switcher with onedarkpro and quietlight themes
   - `theme_persist.lua` - Persists theme selection across sessions
   - `lsp.lua` - LSP configuration with lsp-zero, Mason, and nvim-cmp
-  - `editor.lua` - Editor enhancements (autopairs, surround, comments, etc.)
-  - `ui.lua` - UI components (lualine, nvim-tree)
+  - `editor.lua` - Editor enhancements (autopairs, surround, comments, multi-cursor, which-key)
+  - `ui.lua` - UI components (lualine, nvim-tree, bufferline, trouble)
   - `project.lua` - Project management plugins
   - `git.lua` - Git integration plugins
+  - `search.lua` - Search and replace (nvim-spectre)
   - `nvim-treesitter.lua` - Treesitter configuration
 
 ## Plugin Management
 
 Uses Lazy.nvim for plugin management. Plugin configurations are loaded from `lua/plugins/` directory in this order:
 1. Theme (loaded first to allow overrides)
-2. Editor enhancements
+2. Editor enhancements (including multi-cursor, which-key)
 3. Project management
-4. UI components
+4. UI components (including bufferline, trouble)
 5. LSP configuration
 6. Treesitter
 7. Git tools
+8. Search and replace tools
 
 Lock file: `lazy-lock.json` contains exact plugin versions.
 
@@ -50,7 +52,22 @@ Theme selection persists via `theme_persist.lua`.
 
 Leader key: `<Space>`
 
-Essential shortcuts:
+### VSCode-like shortcuts:
+- `Ctrl+P` - Quick Open (find files)
+- `Ctrl+Shift+P` - Command Palette
+- `Ctrl+Shift+E` - Toggle Explorer (file tree)
+- `Ctrl+`` - Toggle Terminal (floating)
+- `Ctrl+/` - Toggle Comment
+- `F2` - Rename Symbol
+- `Ctrl+Shift+F` - Find and Replace (Spectre)
+- `Ctrl+Shift+X` - Problems Panel (Trouble)
+- `Ctrl+x` - Close Buffer/Tab
+- `Ctrl+Shift+T` - New Buffer
+- `Ctrl+Tab` - Next Buffer
+- `Ctrl+Shift+Tab` - Previous Buffer
+- `Ctrl+1-5` - Go to Buffer 1-5
+
+### Original shortcuts (still available):
 - `<leader>ff` - Telescope find files
 - `<leader>fg` - Telescope live grep
 - `<leader>tt` - Toggle nvim-tree
